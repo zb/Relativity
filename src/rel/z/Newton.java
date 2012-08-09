@@ -7,7 +7,7 @@ public class Newton
 	 * 
 	 * @param im Inertial Mass
 	 * @param ag Acceleration of Gravity
-	 * @return
+	 * @return f force
 	 */
 	double force(double im, double ag)
 	{
@@ -19,7 +19,7 @@ public class Newton
 	 * 
 	 * @param gm Gravitational Mass
 	 * @param iof Intensity of Gravitational Field
-	 * @return
+	 * @return f force
 	 */
 	double forceWithGravitationAsCauseOfAcceleration(double gm, double iof)
 	{
@@ -37,5 +37,29 @@ public class Newton
 	double newtonianAcceleration(double gm, double im, double iof)
 	{
 		return (gm / im) * iof;
+	}
+	
+	
+	/**
+	 * 
+	 * @param f
+	 * @param iof
+	 * @return
+	 */
+	public static double gravitationalMass(double f, double iof )
+	{
+		return f / iof;
+	}
+	
+	/**
+	 * 
+	 * @param a
+	 * @param im
+	 * @param iof
+	 * @return
+	 */
+	public static double gravitationalMassWithAccelerationGiven(double a, double im, double iof)
+	{
+		return a / iof * im;
 	}
 }

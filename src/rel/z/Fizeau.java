@@ -3,8 +3,17 @@ package rel.z;
 public class Fizeau 
 {
 	
-	
-	
+	/**
+	 * 
+	 * @param v
+	 * @param w
+	 * @param c
+	 * @return
+	 */
+	double fizeausPropagationOfLightWithRespectToLiquid(double v, double w, double c)
+	{
+		return w + (v * (1 - (1 / (indexOfRefractionOfLiquid(c,w)*indexOfRefractionOfLiquid(c,w)))));
+	}
 	
 	/**
 	 * 

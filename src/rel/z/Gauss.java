@@ -11,7 +11,7 @@ public class Gauss
 	 * @param u Gaussian coordinate u
 	 * @param v	Gaussian coordinate v
 	 * @param d assumed angle. yaw. curve. curl. depth. height. over there.
-	 * @return uCurvePointShift P', dependent upon u and v of input P.
+	 * @return Point P', dependent upon u and v of input P.
 	 */
 	public static HashMap<String, Double> uShift(double u, double v, double d)
 	{		

@@ -4,8 +4,8 @@ import java.util.HashMap;
 
 public class Galilei 
 {
-	static HashMap<String, Double> galileanTransformation = new HashMap<String, Double>();
-	
+	static HashMap<String, Double> galileianTransformation = new HashMap<String, Double>();
+
 	/**
 	 * 
 	 * @param x
@@ -16,26 +16,17 @@ public class Galilei
 	 * @return
 	 */
 	HashMap<String, Double> Transformation(double x, double y, double z, double t, double v)
-<<<<<<< HEAD
 	{				
-		galileanTransformation.put("First", first(x, v, t));
-		galileanTransformation.put("Second", second(y));
-		galileanTransformation.put("Third", third(z));
-		galileanTransformation.put("Fourth", fourth(t));
-=======
-	{		
-		HashMap<String, Double> galileianTransformation = new HashMap<String, Double>();
-		
+
 		galileianTransformation.put("First", first(x, v, t));
 		galileianTransformation.put("Second", second(y));
 		galileianTransformation.put("Third", third(z));
 		galileianTransformation.put("Fourth", fourth(t));
->>>>>>> f087ac7240b4c412ac590de991fb02d882c69b88
-		
+
 		return galileianTransformation;		
 	}
-	
-	
+
+
 	/**
 	 * 
 	 * @param x
@@ -47,8 +38,8 @@ public class Galilei
 	{
 		return x - v*t;
 	}
-	
-	
+
+
 	/**
 	 * 
 	 * @param y
@@ -58,8 +49,8 @@ public class Galilei
 	{
 		return y;
 	}
-	
-	
+
+
 	/**
 	 * 
 	 * @param z
@@ -69,8 +60,8 @@ public class Galilei
 	{
 		return z;
 	}
-	
-	
+
+
 	/**
 	 * 
 	 * @param t
@@ -81,3 +72,4 @@ public class Galilei
 		return t;
 	}
 }
+

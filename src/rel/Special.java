@@ -48,7 +48,7 @@ public class Special
 	 * @param v
 	 * @return velocity W of light within enclosure
 	 */
-	double propagationOfLightRelativeToCarriage(double v)
+	double theoremOfAdditionofVelocities(double v)
 	{
 		return Basics.speedOfLightInVacuo() + v;
 	}
