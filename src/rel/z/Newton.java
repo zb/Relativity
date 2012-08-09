@@ -62,4 +62,15 @@ public class Newton
 	{
 		return a / iof * im;
 	}
+	
+	
+	public static double inertialMass(double a, double F )
+	{
+		return F / a;
+	}
+	
+	public static double inertialMassFromAcceleration(double a, double gm, double iof)
+	{
+		return a / iof * gm;
+	}
 }
