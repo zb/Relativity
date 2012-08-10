@@ -20,4 +20,24 @@ public class Basics {
 	{
 		return Math.pow(speedOfLightInVacuo(), 2);
 	}
+	
+	/**
+	 * 
+	 * @return one astronomical unit(au), in km.
+	 */
+	public static double astronomicalUnits(double au)
+	{
+		return 149598000 * au;
+	}
+	
+	
+	/**
+	 * 
+	 * @param au
+	 * @return
+	 */
+	public static double kiloAstronomicalUnits(double au)
+	{
+		return 1000 * 149598000 * au;
+	}
 }

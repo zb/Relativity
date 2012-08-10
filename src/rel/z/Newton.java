@@ -64,11 +64,25 @@ public class Newton
 	}
 	
 	
+	/**
+	 * 
+	 * @param a
+	 * @param F
+	 * @return im inferred from Newton's calculations
+	 */
 	public static double inertialMass(double a, double F )
 	{
 		return F / a;
 	}
 	
+	
+	/**
+	 * 
+	 * @param a
+	 * @param gm
+	 * @param iof
+	 * @return imfa inferred from Newton's calculations
+	 */
 	public static double inertialMassFromAcceleration(double a, double gm, double iof)
 	{
 		return a / iof * gm;

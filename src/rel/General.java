@@ -36,7 +36,7 @@ public class General
 	
 	boolean isGravitationalMassEqualToInertialMass(double a, double f, double iof, double im)
 	{
-		if (Newton.gravitationalMass(f, iof) == Newton.inertialMass(a, f))
+		if (Newton.gravitationalMass(f, iof) == Newton.inertialMass(a, f))	
 		{
 			return true;
 		}		
