@@ -18,9 +18,9 @@ public class Minkowski {
 		return z;
 	}
 	
-	double x4(double c, double t)
+	double x4(double t)
 	{
-		return Math.sqrt(-1) * c*t;
+		return Math.sqrt(-1) * Basics.speedOfLightInVacuo() * t;
 	}
 
 }
