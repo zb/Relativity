@@ -1,10 +1,17 @@
 package rel.z;
 
 import java.util.HashMap;
+import java.util.List;
 
 
 public class Lorentz 
 {
+	/**
+	 * 	This is where it gets fun. K' relative to K, and nothing changes but the points on the grid(s).
+	 */
+	static List<HashMap<String, Double>> lorentzTransformations;
+	
+	
 	static HashMap<String, Double> lorentzTransformation = new HashMap<String, Double>();
 	
 	/**
@@ -24,6 +31,29 @@ public class Lorentz
 		lorentzTransformation.put("Fourth", fourth(x, v, t));
 		
 		return lorentzTransformation;		
+	}
+	
+	
+	/**
+	 * Fix this soon.
+	 * 
+	 * @param x
+	 * @param y
+	 * @param z
+	 * @param t
+	 * @param v
+	 * @return
+	 */
+	public static List<HashMap<String, Double>> Transformations(double x, double y, double z, double t, double v)
+	{				
+		lorentzTransformation.put("First", first(x, v, t));		
+		lorentzTransformation.put("Second", second(y));
+		lorentzTransformation.put("Third", third(z));
+		lorentzTransformation.put("Fourth", fourth(x, v, t));
+		
+		lorentzTransformations.add(lorentzTransformation);
+		
+		return lorentzTransformations;		
 	}
 	
 	

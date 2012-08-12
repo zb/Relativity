@@ -1,11 +1,16 @@
 package rel;
 
+import java.util.HashMap;
+import java.util.List;
+
 import rel.z.Basics;
 import rel.z.Einstein;
 import rel.z.Lorentz;
 
 public class Special 
 {
+	
+	List<HashMap<String, Double>> lorentzTransformations;
 	
 	
 	/**
