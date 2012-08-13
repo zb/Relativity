@@ -7,7 +7,9 @@ package rel.y;
  */
 public class MinkowskiSpace 
 {
-	public double v;
+	public double v;	
+	public double c;
+	public double t;
 	
 	public double x1;
 	public double x2;

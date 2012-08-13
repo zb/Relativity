@@ -8,7 +8,9 @@ package rel.y;
  */
 public class LorentzTransformation 
 {
-	public double v;
+	public double v;	
+	public double c;
+	public double t;
 	
 	public double first;
 	public double second;
