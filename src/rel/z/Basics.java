@@ -38,6 +38,6 @@ public class Basics {
 	 */
 	public static double kiloAstronomicalUnits(double au)
 	{
-		return 1000 * 149598000 * au;
+		return 1000 * astronomicalUnits(au);
 	}
 }

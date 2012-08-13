@@ -8,10 +8,7 @@ import rel.z.Einstein;
 import rel.z.Lorentz;
 
 public class Special 
-{
-	
-	List<HashMap<String, Double>> lorentzTransformations;
-	
+{	
 	
 	/**
 	 * 

@@ -12,7 +12,7 @@ public class Lorentz
 	static List<HashMap<String, Double>> lorentzTransformations;
 	
 	
-	static HashMap<String, Double> lorentzTransformation = new HashMap<String, Double>();
+	static HashMap<String, Double> lorentzTransformation;
 	
 	/**
 	 * 
@@ -35,7 +35,7 @@ public class Lorentz
 	
 	
 	/**
-	 * Fix this soon.
+	 * 
 	 * 
 	 * @param x
 	 * @param y
