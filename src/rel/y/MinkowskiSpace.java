@@ -14,7 +14,7 @@ public class MinkowskiSpace
 	
 	private double x;
 	private double y;
-	private double c;
+	private double c = Basics.speedOfLightInVacuo();
 	private double t;
 	
 	private double x1;
@@ -35,7 +35,7 @@ public class MinkowskiSpace
 		this.x4 = Minkowski.x4(t);
 		
 		this.v = v;
-		this.c = Basics.speedOfLightInVacuo();
+		this.c = c;
 		this.k = whichK;		
 	}
 
