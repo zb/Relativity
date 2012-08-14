@@ -12,7 +12,7 @@ import rel.z.Lorentz;
 public class LorentzTransformation 
 {
 	private double v;	
-	private double c = Basics.speedOfLightInVacuoSquared();
+	private double c = Basics.speedOfLightInVacuo();
 
 	private double x;
 	private double y;
