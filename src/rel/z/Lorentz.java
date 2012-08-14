@@ -10,8 +10,7 @@ public class Lorentz
 	 * 	This is where it gets fun. K' relative to K, and nothing changes but the points on the grid(s).
 	 */
 	static List<HashMap<String, Double>> lorentzTransformations;
-	
-	
+		
 	static HashMap<String, Double> lorentzTransformation;
 	
 	/**
@@ -64,7 +63,7 @@ public class Lorentz
 	 * @param t 
 	 * @return x' of given 'frame' or 'position'
 	 */
-	static double first(double x, double v, double t)
+	public static double first(double x, double v, double t)
 	{		
 		return (x-v*t) / contractionInDirectionOfMotion(v);		
 	}
@@ -75,7 +74,7 @@ public class Lorentz
 	 * @param y y'
 	 * @return constant y
 	 */	
-	static double second(double y)
+	public static double second(double y)
 	{		
 		return y;		
 	}
@@ -86,7 +85,7 @@ public class Lorentz
 	 * @param z z'
 	 * @return constant z
 	 */
-	static double third(double z)
+	public static double third(double z)
 	{		
 		return z;
 	}
@@ -99,7 +98,7 @@ public class Lorentz
 	 * @param t
 	 * @return time t' of given 'frame' or 'position'
 	 */
-	static double fourth(double x, double v, double t)
+	public static double fourth(double x, double v, double t)
 	{
 		return (t - (v / (Basics.speedOfLightInVacuoSquared())) * x) / contractionInDirectionOfMotion(v);
 				
