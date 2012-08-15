@@ -22,12 +22,11 @@ public class MinkowskiSpace
 	private double x3;
 	private double x4;
 	
-	private int whichK;
 	private int k;
 	
 	
 
-	public MinkowskiSpace(double x, double y, double c, double t, double v, int whichK)	
+	public MinkowskiSpace(double x, double y, double c, double t, double v, int k)	
 	{		
 		this.x1 = x;
 		this.x2 = y;
@@ -36,7 +35,7 @@ public class MinkowskiSpace
 		
 		this.v = v;
 		this.c = c;
-		this.k = whichK;		
+		this.k = k;		
 	}
 
 
@@ -146,19 +145,6 @@ public class MinkowskiSpace
 	public void setX4(double x4) {
 		this.x4 = x4;
 	}
-
-
-
-	public int getWhichK() {
-		return whichK;
-	}
-
-
-
-	public void setWhichK(int whichK) {
-		this.whichK = whichK;
-	}
-
 
 
 	public int getK() {
