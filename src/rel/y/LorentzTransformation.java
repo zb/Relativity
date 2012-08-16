@@ -12,25 +12,23 @@ import rel.z.Lorentz;
 public class LorentzTransformation 
 {
 	private double v;	
-	private double c = Basics.speedOfLightInVacuo();
+	private double c;
 
 	private double x;
 	private double y;
 	private double z;
 	private double t;
 	
-	
-	private int whichK;
 	private int k;
 	
-	public LorentzTransformation(double x, double y, double z, double t, double v, int whichK)
+	public LorentzTransformation(double x, double y, double z, double t, double v, int k)
 	{
 		this.x = Lorentz.first(x, v, t);
 		this.y = Lorentz.second(y);
 		this.z = Lorentz.third(z);
 		this.t = Lorentz.fourth(x, v, t);
 		
-		this.k = whichK;
+		this.k = k;
 	}
 
 	public double getV() {

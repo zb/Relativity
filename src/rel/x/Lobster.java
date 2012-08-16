@@ -22,6 +22,8 @@ public class Lobster
 	
 	private int k;
 	
+	
+
 	private double xSlope;
 	private double ySlope;
 	private double zSlope;

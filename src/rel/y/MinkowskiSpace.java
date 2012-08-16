@@ -1,6 +1,5 @@
 package rel.y;
 
-import rel.z.Basics;
 import rel.z.Minkowski;
 
 /**
@@ -14,7 +13,7 @@ public class MinkowskiSpace
 	
 	private double x;
 	private double y;
-	private double c = Basics.speedOfLightInVacuo();
+	private double c;
 	private double t;
 	
 	private double x1;

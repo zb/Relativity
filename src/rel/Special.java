@@ -1,8 +1,5 @@
 package rel;
 
-import java.util.HashMap;
-import java.util.List;
-
 import rel.z.Basics;
 import rel.z.Einstein;
 import rel.z.Lorentz;
@@ -125,5 +122,15 @@ public class Special
 	double endOfRod(double v)
 	{
 		return 1 * Lorentz.contractionInDirectionOfMotion(v);
+	}
+	
+	double simultaneity(double B, double t, double v)
+	{		
+		double A = 0;
+		
+		double observerDistanceFromA = B/2;
+		double observerDistanceFromB = B/2;
+		
+		return 0;
 	}
 }
