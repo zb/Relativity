@@ -160,6 +160,6 @@ public class Special
 		System.out.println("Milliseconds passed until the observer sees and/or passes the lightning strike from B while... the mirrors at a 45 degree angle to where he sits have yet to register the lightning strike at A.. discounting the time passed between self-introduced mirrors, eyes, and cognition. - " + t);
 		System.out.println("Distance travelled by observer prior to seeing and/or passing lightning strike B - " + distanceTravelledByObserver);
 		System.out.println("Distance travelled by lightning strike at A - " + A);
-		System.out.println("Distance travelled by lightning strike at B - " + B);		
+		System.out.println("Distance travelled by lightning strike at B - " + Math.abs(B);		
 	}
 }
