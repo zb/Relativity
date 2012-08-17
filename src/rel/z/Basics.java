@@ -40,4 +40,16 @@ public class Basics {
 	{
 		return 1000 * astronomicalUnits(au);
 	}
+	
+	
+	public static double millisecond(double second)
+	{
+		return second / 1000;
+	}
+	
+	
+	public static double nanoSecond(double second)
+	{
+		return second / 1000000000;
+	}
 }

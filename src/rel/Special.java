@@ -124,13 +124,40 @@ public class Special
 		return 1 * Lorentz.contractionInDirectionOfMotion(v);
 	}
 	
-	double simultaneity(double B, double t, double v)
+	
+	/**
+	 * test this weekend.. after work, and refine final answer to something between milli and nanoseconds.
+	 * @param B
+	 * @param v
+	 */
+	void simultaneity(double B, double v)
 	{		
 		double A = 0;
+		double t = 0;
 		
-		double observerDistanceFromA = B/2;
-		double observerDistanceFromB = B/2;
+		double startingPoint = B/2;
+		double distanceTravelledByObserver = 0;
 		
-		return 0;
+		double distanceCoveredAtSpeedOfLightFromA = Basics.millisecond(Basics.speedOfLightInVacuo());
+		double distanceCoveredAtSpeedOfLightFromB = Basics.millisecond(Basics.speedOfLightInVacuo());
+				
+		double positionOfObserver = B/2;
+		
+		
+		while (B > positionOfObserver)
+		{
+			A += distanceCoveredAtSpeedOfLightFromA;
+			B -= distanceCoveredAtSpeedOfLightFromB;
+			distanceTravelledByObserver += v/1000;
+			positionOfObserver += v/1000;
+			t++;
+			
+		}
+		
+		System.out.println("Distance of rail line A,B - " + B);
+		System.out.println("Milliseconds passed until the observer sees and/or passes the lightning strike from B while.. the mirrors at a 90 degree angle to where he sits have yet to register the lightning strike at A.. discounting the time passed between mirrors, eyes, and cognition - " + t);
+		System.out.println("Distance travelled by observer prior to seeing and/or passing lightning strike B - " + startingPoint + distanceTravelledByObserver);
+		System.out.println("Distance travelled by lightning strike at A - " + A);
+		System.out.println("Distance travelled by lightning strike at B - " + B);		
 	}
 }
