@@ -1,5 +1,7 @@
 package rel.x;
 
+import rel.Special;
+
 
 /**
  * Lobster to serve as both observer moving in space and as object 
@@ -89,6 +91,25 @@ public class Lobster
 	void clawAttack()
 	{
 		System.exit(0);
+	}
+	
+	
+	void propel()
+	{
+		
+	}
+	
+	
+	/**
+	 * Assuming a clean hit.
+	 * @param m
+	 * @param v
+	 */
+	double lobsterSlam(GodsFishTank gft, double m, double v)
+	{
+		double kineticEnergyofLobster  = Special.kineticEnergyOfMassM(m, v);
+		
+		return kineticEnergyofLobster;
 	}
 	
 	

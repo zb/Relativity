@@ -56,7 +56,7 @@ public class Special
 	 * 
 	 * @param m mass of object moving
 	 * @param v velocity at which mass moves
-	 * @return
+	 * @return Eo? Verify.
 	 */
 	public static double kineticEnergyOfMassM(double m, double v)
 	{
@@ -68,7 +68,7 @@ public class Special
 	 * 
 	 * @param Eo energy
 	 * @param v velocity
-	 * @return The increase in energy of a body moving with velocity c after absorbing an amount of energy Eo
+	 * @return The increase in energy of a body moving with velocity v? after absorbing an amount of energy Eo
 	 */
 	double increaseInKineticEnergy(double Eo, double v)
 	{
@@ -126,7 +126,6 @@ public class Special
 	
 	
 	/**
-	 * test this weekend.. after work, and refine final answer to something between milli and nanoseconds.
 	 * @param B
 	 * @param v
 	 */
@@ -137,21 +136,19 @@ public class Special
 		
 		double distanceOfRailLine = B;
 		
-		double startingPoint = B/2;
 		double distanceTravelledByObserver = 0;
 		
-		double distanceCoveredAtSpeedOfLightFromA = Basics.millisecond(Basics.speedOfLightInVacuo());
-		double distanceCoveredAtSpeedOfLightFromB = Basics.millisecond(Basics.speedOfLightInVacuo());
+		double distanceCoveredAtSpeedOfLight = Basics.nanoSecond(Basics.speedOfLightInVacuo());
 				
 		double positionOfObserver = B/2;
 		
 		
 		while (B > positionOfObserver)
 		{
-			A += distanceCoveredAtSpeedOfLightFromA;
-			B -= distanceCoveredAtSpeedOfLightFromB;
-			distanceTravelledByObserver += v/1000;
-			positionOfObserver += v/1000;
+			A += distanceCoveredAtSpeedOfLight;
+			B -= distanceCoveredAtSpeedOfLight;
+			distanceTravelledByObserver += v/1000000000;
+			positionOfObserver += v/1000000000;
 			t++;
 			
 		}
@@ -160,6 +157,6 @@ public class Special
 		System.out.println("Milliseconds passed until the observer sees and/or passes the lightning strike from B while... the mirrors at a 45 degree angle to where he sits have yet to register the lightning strike at A.. discounting the time passed between self-introduced mirrors, eyes, and cognition. - " + t);
 		System.out.println("Distance travelled by observer prior to seeing and/or passing lightning strike B - " + distanceTravelledByObserver);
 		System.out.println("Distance travelled by lightning strike at A - " + A);
-		System.out.println("Distance travelled by lightning strike at B - " + Math.abs(B);		
+		System.out.println("Distance travelled by lightning strike at B - " + Math.abs(B));		
 	}
 }
