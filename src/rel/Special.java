@@ -83,7 +83,7 @@ public class Special
 	 * @param m
 	 * @return the new amount of energy of a body moving with velocity c after absorbing an amount of energy Eo
 	 */
-	double newAmountOfEnergy(double Eo, double v, double m)
+	public static double newAmountOfEnergy(double Eo, double v, double m)
 	{
 		return (Einstein.energy(m) + Eo) / Lorentz.contractionInDirectionOfMotion(v);		
 	}	

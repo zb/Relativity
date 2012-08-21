@@ -24,7 +24,7 @@ public class Lobster
 	
 	private int k;
 	
-	
+	private double kineticEnergy;
 
 	private double xSlope;
 	private double ySlope;
@@ -52,6 +52,8 @@ public class Lobster
 		this.y = y;
 		this.z = z;
 		this.t = t;
+		
+		this.kineticEnergy = Special.kineticEnergyOfMassM(m, v);
 	}
 	
 	
@@ -81,8 +83,11 @@ public class Lobster
 		this.xSlope = xSlope;
 		this.ySlope = ySlope;
 		this.zSlope = zSlope;
+		
+		this.kineticEnergy = Special.kineticEnergyOfMassM(m, v);
 	}
-	
+
+
 	void squeal() throws InterruptedException
 	{
 		Thread.sleep(3000);
@@ -91,27 +96,23 @@ public class Lobster
 	void clawAttack()
 	{
 		System.exit(0);
-	}
-	
+	}	
 	
 	void propel()
 	{
 		
 	}
+
 	
 	
-	/**
-	 * Assuming a clean hit.
-	 * @param m
-	 * @param v
-	 */
-	double lobsterSlam(GodsFishTank gft, double m, double v)
-	{
-		double kineticEnergyofLobster  = Special.kineticEnergyOfMassM(m, v);
-		
-		return kineticEnergyofLobster;
+	public double getKineticEnergy() {
+		return kineticEnergy;
 	}
-	
+
+
+	public void setKineticEnergy(double kineticEnergy) {
+		this.kineticEnergy = kineticEnergy;
+	}	
 	
 	
 	public double getM() {
