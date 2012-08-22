@@ -92,6 +92,7 @@ public class GodsFishTank
 		
 		
 		
+		// Squared negative in Lorentz.contractionInDirectionOfMotion();
 		double lobsterCollision(Lobster l, GodsFishTank gft)
 		{
 			relativeVelocity = l.getV() - gft.getV();
