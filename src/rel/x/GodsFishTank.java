@@ -4,7 +4,7 @@ import rel.Special;
 
 public class GodsFishTank 
 {		
-		private Lobster L;
+		private Lobster l;
 
 		private double volume;
 		private double height;
@@ -33,16 +33,16 @@ public class GodsFishTank
 		 * @param hr
 		 * @param vr
 		 */
-		public GodsFishTank(Lobster L, double height, double length, double width, double v, double hr, double vr)
+		public GodsFishTank(Lobster l, double height, double length, double width, double v, double hr, double vr)
 		{
-			this.L = L;			
+			this.l = l;			
 			
 			this.v = v;
 			this.hr = hr;
 			this.vr = vr;	
 			
 			this.volume = height * length * width;			
-			this.m = this.volume * cubicKiloMeterOfWater();
+			this.m = this.volume * cubicKilometerOfWater();
 			
 			// ok. here. does a lobster going backward relative to god's fish tank contribute to the gft's kinetic energy?
 			// i think not, my friends.	although he may after the gft hits something. yes, this lobster is a he.
@@ -58,13 +58,13 @@ public class GodsFishTank
 		 * @param v
 		 * @return 
 		 */
-		public GodsFishTank(Lobster L, double radius, double v)
+		public GodsFishTank(Lobster l, double radius, double v)
 		{
-			this.L = L;
+			this.l = l;
 			this.v = v;	
 			
 			this.volume = (4/3) *  Math.PI * Math.pow(radius, 3);	
-			this.m = this.volume * cubicKiloMeterOfWater();
+			this.m = this.volume * cubicKilometerOfWater();
 			this.kineticEnergy = Special.kineticEnergyOfMassM(m, v);	
 		}
 		
@@ -78,40 +78,35 @@ public class GodsFishTank
 		 * @param hr
 		 * @param vr
 		 */
-		public GodsFishTank(Lobster L, double length, double v, double hr, double vr)
+		public GodsFishTank(Lobster l, double length, double v, double hr, double vr)
 		{
-			this.L = L;
+			this.l = l;
 			
 			this.hr = hr;
 			this.vr = vr;			
 
 			this.volume = Math.pow(length, 3);
-			this.m = this.volume * cubicKiloMeterOfWater();
+			this.m = this.volume * cubicKilometerOfWater();
 			this.kineticEnergy = Special.kineticEnergyOfMassM(m, v);		
 		}
 		
 		
 		
-		double positiveLobsterCollision(Lobster L, GodsFishTank gft)
+		double lobsterCollision(Lobster l, GodsFishTank gft)
 		{
-			relativeVelocity = gft.getV() - L.getV();
-			relativeKineticEnergy = Special.kineticEnergyOfMassM(L.getM(), relativeVelocity);
+			relativeVelocity = l.getV() - gft.getV();
+			relativeKineticEnergy = Special.kineticEnergyOfMassM(l.getM(), relativeVelocity);
 						
 			return Special.newAmountOfEnergy(relativeKineticEnergy, relativeVelocity, gft.getM());
 		}
 		
 		
-		// HMM.
-		double negativeLobsterCollision()
-		{
-			return 0;
-		}
 		
 		/**
 		 *
 		 * @return weight in metric tons
 		 */
-		double cubicKiloMeterOfWater()
+		double cubicKilometerOfWater()
 		{
 			return 10000;
 		}
@@ -121,12 +116,12 @@ public class GodsFishTank
 		
 
 		public Lobster getL() {
-			return L;
+			return l;
 		}
 
 
 		public void setL(Lobster l) {
-			L = l;
+			this.l = l;
 		}
 
 

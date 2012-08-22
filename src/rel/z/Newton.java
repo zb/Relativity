@@ -31,12 +31,11 @@ public class Newton
 	 * 
 	 * @param gm Gravitational Mass
 	 * @param im Inertial Mass
-	 * @param iof Intensity of Gravitational Field
-	 * @return
+	 * @return acceleration / Intensity of Gravitational Field
 	 */
-	double newtonianAcceleration(double gm, double im, double iof)
+	double newtonianAcceleration(double gm, double im)
 	{
-		return (gm / im) * iof;
+		return gm / im;
 	}
 	
 	
