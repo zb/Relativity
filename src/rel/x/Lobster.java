@@ -195,32 +195,32 @@ public class Lobster
 	}
 
 
-	public double getxSlope() {
+	public double getXSlope() {
 		return xSlope;
 	}
 
 
-	public void setxSlope(double xSlope) {
+	public void setXSlope(double xSlope) {
 		this.xSlope = xSlope;
 	}
 
 
-	public double getySlope() {
+	public double getYSlope() {
 		return ySlope;
 	}
 
 
-	public void setySlope(double ySlope) {
+	public void setYSlope(double ySlope) {
 		this.ySlope = ySlope;
 	}
 
 
-	public double getzSlope() {
+	public double getZSlope() {
 		return zSlope;
 	}
 
 
-	public void setzSlope(double zSlope) {
+	public void setZSlope(double zSlope) {
 		this.zSlope = zSlope;
 	}
 	

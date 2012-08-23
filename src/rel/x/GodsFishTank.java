@@ -20,7 +20,50 @@ public class GodsFishTank
 		private double relativeVelocity; // lobster to fishtank.
 		private double relativeKineticEnergy; //ditto.
 		
+		private double xSlope;
+		private double ySlope;
+		private double zSlope;
 		
+
+		public double getRelativeKineticEnergy() {
+			return relativeKineticEnergy;
+		}
+
+
+		public void setRelativeKineticEnergy(double relativeKineticEnergy) {
+			this.relativeKineticEnergy = relativeKineticEnergy;
+		}
+
+
+		public double getXSlope() {
+			return xSlope;
+		}
+
+
+		public void setXSlope(double xSlope) {
+			this.xSlope = xSlope;
+		}
+
+
+		public double getYSlope() {
+			return ySlope;
+		}
+
+
+		public void setYSlope(double ySlope) {
+			this.ySlope = ySlope;
+		}
+
+
+		public double getZSlope() {
+			return zSlope;
+		}
+
+
+		public void setZSlope(double zSlope) {
+			this.zSlope = zSlope;
+		}
+
 
 		/**
 		 * Rectangular GFT
@@ -44,8 +87,6 @@ public class GodsFishTank
 			this.volume = height * length * width;			
 			this.m = this.volume * cubicKilometerOfWater();
 			
-			// ok. here. does a lobster going backward relative to god's fish tank contribute to the gft's kinetic energy?
-			// i think not, my friends.	although he may after the gft hits something. yes, this lobster is a he.
 			this.kineticEnergy = Special.kineticEnergyOfMassM(m, v);			
 		}
 		
@@ -92,13 +133,12 @@ public class GodsFishTank
 		
 		
 		
-		// Squared negative in Lorentz.contractionInDirectionOfMotion();
-		double lobsterCollision(Lobster l, GodsFishTank gft)
+		double lobsterCollision(double lv, double lm, double gv, double gm)
 		{
-			relativeVelocity = l.getV() - gft.getV();
-			relativeKineticEnergy = Special.kineticEnergyOfMassM(l.getM(), relativeVelocity);
+			relativeVelocity = lv - gv;
+			relativeKineticEnergy = Special.kineticEnergyOfMassM(lm, relativeVelocity);
 						
-			return Special.newAmountOfEnergy(relativeKineticEnergy, relativeVelocity, gft.getM());
+			return Special.newAmountOfEnergy(relativeKineticEnergy, relativeVelocity, gm);
 		}
 		
 		
