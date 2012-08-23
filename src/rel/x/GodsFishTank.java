@@ -102,6 +102,7 @@ public class GodsFishTank
 			relativeVelocity = lv - gv;
 			relativeKineticEnergy = Special.kineticEnergyOfMassM(lm, relativeVelocity);
 			
+			// This can't be right.
 			if (relativeVelocity < 0) return -1*Special.newAmountOfEnergy(relativeKineticEnergy, relativeVelocity, gm);
 			
 			return Special.newAmountOfEnergy(relativeKineticEnergy, relativeVelocity, gm);
