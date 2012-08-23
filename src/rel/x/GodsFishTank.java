@@ -20,51 +20,15 @@ public class GodsFishTank
 		private double relativeVelocity; // lobster to fishtank.
 		private double relativeKineticEnergy; //ditto.
 		
+		private double x;
+		private double y;
+		private double z;
+		
 		private double xSlope;
 		private double ySlope;
 		private double zSlope;
 		
-
-		public double getRelativeKineticEnergy() {
-			return relativeKineticEnergy;
-		}
-
-
-		public void setRelativeKineticEnergy(double relativeKineticEnergy) {
-			this.relativeKineticEnergy = relativeKineticEnergy;
-		}
-
-
-		public double getXSlope() {
-			return xSlope;
-		}
-
-
-		public void setXSlope(double xSlope) {
-			this.xSlope = xSlope;
-		}
-
-
-		public double getYSlope() {
-			return ySlope;
-		}
-
-
-		public void setYSlope(double ySlope) {
-			this.ySlope = ySlope;
-		}
-
-
-		public double getZSlope() {
-			return zSlope;
-		}
-
-
-		public void setZSlope(double zSlope) {
-			this.zSlope = zSlope;
-		}
-
-
+		
 		/**
 		 * Rectangular GFT
 		 * @param L
@@ -137,9 +101,120 @@ public class GodsFishTank
 		{
 			relativeVelocity = lv - gv;
 			relativeKineticEnergy = Special.kineticEnergyOfMassM(lm, relativeVelocity);
-						
+			
+			if (relativeVelocity < 0) return -1*Special.newAmountOfEnergy(relativeKineticEnergy, relativeVelocity, gm);
+			
 			return Special.newAmountOfEnergy(relativeKineticEnergy, relativeVelocity, gm);
 		}
+		
+		
+		
+
+		public double getRelativeKineticEnergy() {
+			return relativeKineticEnergy;
+		}
+
+
+		public void setRelativeKineticEnergy(double relativeKineticEnergy) {
+			this.relativeKineticEnergy = relativeKineticEnergy;
+		}
+		
+		
+		
+		public double getX() {
+			return x;
+		}
+
+
+		public void setX(double x) {
+			this.x = x;
+		}
+
+
+		public double getY() {
+			return y;
+		}
+
+
+		public void setY(double y) {
+			this.y = y;
+		}
+
+
+		public double getZ() {
+			return z;
+		}
+
+
+		public void setZ(double z) {
+			this.z = z;
+		}
+
+
+		public double getxSlope() {
+			return xSlope;
+		}
+
+
+		public void setxSlope(double xSlope) {
+			this.xSlope = xSlope;
+		}
+
+
+		public double getySlope() {
+			return ySlope;
+		}
+
+
+		public void setySlope(double ySlope) {
+			this.ySlope = ySlope;
+		}
+
+
+		public double getzSlope() {
+			return zSlope;
+		}
+
+
+		public void setzSlope(double zSlope) {
+			this.zSlope = zSlope;
+		}
+
+
+	
+
+
+		public double getXSlope() {
+			return xSlope;
+		}
+
+
+		public void setXSlope(double xSlope) {
+			this.xSlope = xSlope;
+		}
+
+
+		public double getYSlope() {
+			return ySlope;
+		}
+
+
+		public void setYSlope(double ySlope) {
+			this.ySlope = ySlope;
+		}
+
+
+		public double getZSlope() {
+			return zSlope;
+		}
+
+
+		public void setZSlope(double zSlope) {
+			this.zSlope = zSlope;
+		}
+
+
+		
 		
 		
 		
