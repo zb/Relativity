@@ -10,7 +10,9 @@ public class K
 	private double x;
 	private double y;
 	private double z;
-	private double t;
+	
+	private double gftT;
+	private double lT;
 	
 	private double k;
 	private double K;
