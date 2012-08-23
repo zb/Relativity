@@ -10,10 +10,10 @@ public class K
 	private double x;
 	private double y;
 	private double z;
-	
+
 	private double gftT;
 	private double lT;
-	
+
 	private double k;
 	private double K;
 	
@@ -87,12 +87,7 @@ public class K
 	public void setZ(double z) {
 		this.z = z;
 	}
-	public double getT() {
-		return t;
-	}
-	public void setT(double t) {
-		this.t = t;
-	}
+
 
 	public double getK() {
 		return K;
