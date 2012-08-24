@@ -97,15 +97,13 @@ public class GodsFishTank
 		
 		
 		
-		double lobsterCollision(double lv, double lm, double gv, double gm)
+		double energyPostCollission(double lV, double lM, double gftV, double gftM)
 		{
-			relativeVelocity = lv - gv;
-			relativeKineticEnergy = Special.kineticEnergyOfMassM(lm, relativeVelocity);
+			relativeVelocity = lV - gftV;
+			relativeKineticEnergy = Special.kineticEnergyOfMassM(lM, relativeVelocity);
 			
-			// This can't be right.
-			if (relativeVelocity < 0) return -1*Special.newAmountOfEnergy(relativeKineticEnergy, relativeVelocity, gm);
-			
-			return Special.newAmountOfEnergy(relativeKineticEnergy, relativeVelocity, gm);
+		
+			return Special.newAmountOfEnergy(relativeKineticEnergy, relativeVelocity, gftM);
 		}
 		
 		

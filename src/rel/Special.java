@@ -87,14 +87,7 @@ public class Special
 	{
 		return (Einstein.energy(m) + Eo) / Lorentz.contractionInDirectionOfMotion(v);		
 	}	
-	
-	
-	
-	public static double negativeNewAmountOfEnergy(double Eo, double v, double m)
-	{
-		return (Einstein.energy(m) - Eo) / Lorentz.contractionInDirectionOfMotion(v);	
-	}
-	
+
 	/**
 	 * 
 	 * @param v
