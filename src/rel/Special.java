@@ -85,7 +85,7 @@ public class Special
 	 */
 	public static double newAmountOfEnergy(double Eo, double v, double m)
 	{
-		if (v < 0) return v - (Einstein.energy(m) - Eo) / Lorentz.contractionInDirectionOfMotion(v);	
+		if (v < 0) return (Einstein.energy(m) - Eo) / Lorentz.contractionInDirectionOfMotion(v);	
 		return (Einstein.energy(m) + Eo) / Lorentz.contractionInDirectionOfMotion(v);		
 	}	
 
