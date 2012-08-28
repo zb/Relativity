@@ -55,15 +55,17 @@ public class K
 	{
 		k.setK(k.getK() + 1);		
 		
-		gft.setX(gft.getX() + gft.getXSlope() );
-		gft.setY(gft.getY() + gft.getYSlope() );
-		gft.setZ(gft.getZ() + gft.getZSlope() );
+		this.gft = k.getGft();
 		
-		l = gft.getL();
+		this.gft.setX(gft.getX() + gft.getXSlope() );
+		this.gft.setY(gft.getY() + gft.getYSlope() );
+		this.gft.setZ(gft.getZ() + gft.getZSlope() );
 		
-		l.setX(l.getX() + l.getXSlope());
-		l.setY(l.getY() + l.getYSlope());
-		l.setZ(l.getZ() + l.getZSlope());		
+		this.l = this.gft.getL();
+		
+		this.l.setX(l.getX() + l.getXSlope());
+		this.l.setY(l.getY() + l.getYSlope());
+		this.l.setZ(l.getZ() + l.getZSlope());		
 	}
 	
 	
