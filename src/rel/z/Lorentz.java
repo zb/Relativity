@@ -73,7 +73,7 @@ public class Lorentz
 
 	public static double contractionInDirectionOfMotion(double v)
 	{
-	 	if (v < 0) Math.sqrt(1 + (-(v*v) / (Basics.speedOfLightInVacuoSquared())) );		
+	 	if (v < 0) return Math.sqrt(1 + (-(v*v) / (Basics.speedOfLightInVacuoSquared())) );		
 		return Math.sqrt(1 - ((v*v) / (Basics.speedOfLightInVacuoSquared())) );		
 	}
 	
