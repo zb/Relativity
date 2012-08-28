@@ -31,11 +31,13 @@ public class K
 	private double lY;
 	private double lZ;
 	
+	
+	
 	private double kineticEnergyOfGft;
 	private double kineticEnergyOfLobster;
 	
 	
-	
+	// I've yet to test this - logic dictates this.l reassigns an instance of l, but I can't be sure.
 	K(GodsFishTank gft)
 	{
 		this.gft = gft;
@@ -45,6 +47,9 @@ public class K
 		this.gv = gft.getV();
 		
 		this.lv = l.getV();
+		
+		this.gftT = gft.getT();
+		this.lT = l.getT();
 		
 		this.kineticEnergyOfGft = gft.getKineticEnergy();
 		this.kineticEnergyOfLobster = l.getKineticEnergy();

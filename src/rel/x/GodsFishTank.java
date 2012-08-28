@@ -23,6 +23,7 @@ public class GodsFishTank
 		private double x;
 		private double y;
 		private double z;
+		private double t;
 		
 		private double xSlope;
 		private double ySlope;
@@ -118,6 +119,16 @@ public class GodsFishTank
 			this.relativeKineticEnergy = relativeKineticEnergy;
 		}
 		
+		
+		
+		public double getT() {
+			return t;
+		}
+
+
+		public void setT(double t) {
+			this.t = t;
+		}
 		
 		
 		public double getX() {
