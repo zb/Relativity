@@ -8,11 +8,13 @@ import rel.z.Lorentz;
 
 public class K 
 {
+	private double gm;
 	private double gx;
 	private double gy;
 	private double gz;
 	private double gt;
 	
+	private double lm;
 	private double lx;
 	private double ly;
 	private double lz;
@@ -33,6 +35,12 @@ public class K
 	private double lX;
 	private double lY;
 	private double lZ;
+	
+	private static List<K> kList;
+	
+	private K newK;
+	private GodsFishTank newGft;
+	private Lobster newL;
 	
 	
 	
@@ -59,9 +67,20 @@ public class K
 		
 	}
 	
-	private void nextK(K k)
-	{
-		k.setK(k.getK() + 1);		
+	public static List<K> klist()
+	{		
+		return kList;		
+	}
+	
+	
+	/**
+	 * 
+	 * @param k
+	 * @return new K with updated parameters for L, Gft, and K after storing old L, Gft, and K in kList
+	 */
+	private K nextK(K k, List<K> kList)
+	{		
+			
 		
 		this.gft = k.getGft();
 		this.gv = gft.getV();
@@ -69,25 +88,46 @@ public class K
 		this.gx = gft.getX();
 		this.gy = gft.getY();
 		this.gz = gft.getZ();
-		this.gt = gft.getT();
+		this.gt = gft.getT();		
 		
-		gft.setX(Lorentz.first(gx, gv, gt));
-		gft.setY(Lorentz.second(gy));
-		gft.setZ(Lorentz.third(gz));
-		gft.setT(Lorentz.fourth(gx, gv, gt));
 		
-		this.l = this.gft.getL();
-		this.lv = this.l.getV();
+		this.l = gft.getL();
+		
+		this.lm = l.getM();
+		this.lv = l.getV();
 		
 		this.lx = l.getX();
 		this.ly = l.getY();
 		this.lz = l.getZ();
 		this.lt = l.getT();
+		this.lm = l.getM();
 		
-		l.setX(Lorentz.first(lx,  lv, lt));
-		l.setY(Lorentz.second(ly));
-		l.setZ(Lorentz.third(lz));	
-		l.setT(Lorentz.fourth(lx,  lv, lt));
+		
+		// Create new L from old L and translate anew.
+		Lobster newL = new Lobster(gm, gv, gx, gy, gz, gt);
+		
+		newL.setX(Lorentz.first(lx,  lv, lt));
+		newL.setY(Lorentz.second(ly));
+		newL.setZ(Lorentz.third(lz));	
+		newL.setT(Lorentz.fourth(lx,  lv, lt));
+		
+		// Create new Gft from old Gft and new L and translate anew.I went with a spherical gft as this nullifies rotation and greatly reduces(if not effectively eliminates) 'angles' of impact
+		GodsFishTank newGft = new GodsFishTank(newL, gft.getRadius(), gft.getV());
+		
+		newGft.setX(Lorentz.first(gx, gv, gt));
+		newGft.setY(Lorentz.second(gy));
+		newGft.setZ(Lorentz.third(gz));
+		newGft.setT(Lorentz.fourth(gx, gv, gt));		
+		
+		// Create new K from new GFT
+		K newK = new K(newGft);		
+		
+		newK.setK(k.getK() + 1);	
+		
+		//Store old, unchanged K in List
+		kList.add(k);
+		
+		return newK;
 	}	
 	
 

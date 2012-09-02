@@ -6,7 +6,6 @@ import rel.Special;
 /**
  * Lobster to serve as both observer moving in space and as object 
  * moving relative to liquid.
- * Still need to create the pot. Water refraction. waves. planet. star. system...
  * @author zach
  *
  */
@@ -42,11 +41,11 @@ public class Lobster
 	 * @param z
 	 * @param t
 	 */
-	public Lobster(double m, double v, double r, double x, double y, double z, double t)
+	public Lobster(double m, double v, double x, double y, double z, double t)
 	{
 		this.m = m;
 		this.v = v;
-		this.r = r;
+		
 		
 		this.x = x;
 		this.y = y;
