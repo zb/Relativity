@@ -93,10 +93,9 @@ public class Special
 	 * 
 	 * @param v
 	 * @param w
-	 * @param c
 	 * @return W velocity of light, Fizeau
 	 */
-	double propagationOfLightWithRespectToLiquid(double v, double w, double c)
+	double propagationOfLightWithRespectToLiquid(double v, double w)
 	{
 		double numerator = v + w;
 		
@@ -104,27 +103,7 @@ public class Special
 		
 		return numerator / denominator;
 	}
-	
-	/**
-	 * 
-	 * @param v
-	 * @return 0
-	 */
-	double beginningOfRod(double v)
-	{
-		return 0 * Lorentz.contractionInDirectionOfMotion(v);
-	}
-	
-	/**
-	 * 
-	 * @param v
-	 * @return
-	 */
-	double endOfRod(double v)
-	{
-		return 1 * Lorentz.contractionInDirectionOfMotion(v);
-	}
-	
+
 	
 	/**
 	 * @param B
@@ -150,8 +129,7 @@ public class Special
 			B -= distanceCoveredAtSpeedOfLight;
 			distanceTravelledByObserver += v/1000000000;
 			positionOfObserver += v/1000000000;
-			t++;
-			
+			t++;			
 		}
 		
 		System.out.println("Distance of rail line A,B - " + distanceOfRailLine);

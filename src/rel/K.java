@@ -79,9 +79,7 @@ public class K
 	 * @return new K with updated parameters for L, Gft, and K after storing old L, Gft, and K in kList
 	 */
 	private K nextK(K k, List<K> kList)
-	{		
-			
-		
+	{				
 		this.gft = k.getGft();
 		this.gv = gft.getV();
 		
@@ -100,18 +98,17 @@ public class K
 		this.ly = l.getY();
 		this.lz = l.getZ();
 		this.lt = l.getT();
-		this.lm = l.getM();
 		
 		
 		// Create new L from old L and translate anew.
-		Lobster newL = new Lobster(gm, gv, gx, gy, gz, gt);
+		Lobster newL = new Lobster(lm, lv, lx, ly, lz, lt);
 		
 		newL.setX(Lorentz.first(lx,  lv, lt));
 		newL.setY(Lorentz.second(ly));
 		newL.setZ(Lorentz.third(lz));	
 		newL.setT(Lorentz.fourth(lx,  lv, lt));
 		
-		// Create new Gft from old Gft and new L and translate anew.I went with a spherical gft as this nullifies rotation and greatly reduces(if not effectively eliminates) 'angles' of impact
+		// Create new Gft from old Gft and new L and translate anew.
 		GodsFishTank newGft = new GodsFishTank(newL, gft.getRadius(), gft.getV());
 		
 		newGft.setX(Lorentz.first(gx, gv, gt));
