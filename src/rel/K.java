@@ -42,10 +42,32 @@ public class K
 	private GodsFishTank newGft;
 	private Lobster newL;
 	
+	private K currentK;
+	
 	
 	
 	private double kineticEnergyOfGft;
 	private double kineticEnergyOfLobster;
+	
+	
+	void printResults(List<K> kList)
+	{
+		int i = 0;
+		while (i < kList.size())
+		{
+			currentK = kList.get(i);
+			System.out.println("K " + i + ":\n");
+			
+			gft = currentK.getGft();
+			l = gft.getL();
+			
+			System.out.println("Gft x, t  - " + gft.getX() + ", " + gft.getT());
+			System.out.println("L x, t - " + l.getX() + ", " + l.getT());			
+			
+			i++;
+		}
+		
+	}
 	
 	
 	// I've yet to test this - logic dictates this.l reassigns an instance of l, but I can't be sure.
@@ -101,7 +123,7 @@ public class K
 		
 		
 		// Create new L from old L and translate anew.
-		Lobster newL = new Lobster(lm, lv, lx, ly, lz, lt);
+		newL = new Lobster(lm, lv, lx, ly, lz, lt);
 		
 		newL.setX(Lorentz.first(lx,  lv, lt));
 		newL.setY(Lorentz.second(ly));
@@ -109,7 +131,7 @@ public class K
 		newL.setT(Lorentz.fourth(lx,  lv, lt));
 		
 		// Create new Gft from old Gft and new L and translate anew.
-		GodsFishTank newGft = new GodsFishTank(newL, gft.getRadius(), gft.getV());
+		newGft = new GodsFishTank(newL, gft.getRadius(), gft.getV());
 		
 		newGft.setX(Lorentz.first(gx, gv, gt));
 		newGft.setY(Lorentz.second(gy));
@@ -117,7 +139,7 @@ public class K
 		newGft.setT(Lorentz.fourth(gx, gv, gt));		
 		
 		// Create new K from new GFT
-		K newK = new K(newGft);		
+		newK = new K(newGft);		
 		
 		newK.setK(k.getK() + 1);	
 		
